@@ -10,9 +10,9 @@ public class TestAccurate {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Compute : x □ y =");
 		System.out.print("x = ");
-		String x = scanner.nextLine();
+		double x = scanner.nextDouble();
 		System.out.print("y = ");
-		String y = scanner.nextLine();
+		double y = scanner.nextDouble();
 
 		// Create Accurate class
 		Accurate compute = new Accurate(x,y);
@@ -21,6 +21,10 @@ public class TestAccurate {
 		System.out.println("x + y =" + compute.add());
 		System.out.println("x - y =" + compute.sub());
 		System.out.println("x * y =" + compute.multi());
-		System.out.println("x / y =" + compute.subtracInt());
+		if ( y == 0) {
+			System.out.println("y can't be 0");
+		} else {
+			System.out.println("x / y =" + compute.subtrac());
+		}
 	}
 }
