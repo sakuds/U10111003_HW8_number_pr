@@ -48,10 +48,10 @@ public class Accurate {
 		return num1.multiply(num2).doubleValue();
 	}
 
-	// sub method
+	// sub method and take fifth decimal place.
 	public double subtrac(){
 			BigDecimal num1 = new BigDecimal(Double.toString(x));
 			BigDecimal num2 = new BigDecimal(Double.toString(y));
-			return num1.divide(num2).doubleValue();
+			return num1.divide(num2,5, BigDecimal.ROUND_DOWN).doubleValue();
 	}
 }
